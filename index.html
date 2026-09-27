@@ -1,98 +1,285 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عبد الرحمن غزال | AI & Full-Stack Engineer</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Readex Pro', 'Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f3ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body { font-family: 'Cairo', sans-serif; }
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            font-family: 'Readex Pro', sans-serif;
+        }
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15);
+        }
+        .glow-effect {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen">
+<body class="bg-grid min-h-screen relative overflow-x-hidden selection:bg-indigo-500 selection:text-white">
 
-    <!-- Header / Navbar -->
-    <header class="max-w-6xl mx-auto p-6 flex justify-between items-center border-b border-slate-800">
-        <h1 class="text-2xl font-black text-indigo-400">عبد الرحمن غزال</h1>
-        <nav class="space-x-6 space-x-reverse text-sm font-semibold">
-            <a href="#about" class="hover:text-indigo-400 transition">عني</a>
-            <a href="#projects" class="hover:text-indigo-400 transition">المشاريع</a>
-            <a href="#research" class="hover:text-indigo-400 transition">الأبحاث</a>
-            <a href="#contact" class="hover:text-indigo-400 transition">تواصل معي</a>
-        </nav>
+    <!-- Background Ambient Light -->
+    <div class="glow-effect top-0 right-1/4 -z-10"></div>
+    <div class="glow-effect top-1/3 left-10 -z-10 bg-purple-600/10"></div>
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+                    غ
+                </div>
+                <div>
+                    <span class="font-bold text-lg text-white block leading-tight">عبد الرحمن غزال</span>
+                    <span class="text-xs text-indigo-400 font-light">AI & Full-Stack Engineer</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-indigo-400 transition">نبذة عني</a>
+                <a href="#projects" class="hover:text-indigo-400 transition">المشاريع</a>
+                <a href="#research" class="hover:text-indigo-400 transition">الأبحاث العلمية</a>
+                <a href="#experience" class="hover:text-indigo-400 transition">الخبرات</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-indigo-600/90 hover:bg-indigo-600 text-white font-medium transition shadow-lg shadow-indigo-600/20 border border-indigo-500/30">تواصل معي</a>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="about" class="max-w-6xl mx-auto px-6 py-20 text-center md:text-right flex flex-col md:flex-row items-center justify-between gap-10">
-        <div class="space-y-6 md:w-2/3">
-            <span class="bg-indigo-500/10 text-indigo-400 text-xs font-bold px-3 py-1 rounded-full border border-indigo-500/20">AI & Full-Stack Engineer</span>
-            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
-                أبني حلولاً برمجية ذكية تجمع بين <span class="text-indigo-400">الذكاء الاصطناعي</span> وتطوير الويب المتكامل.
-            </h2>
-            <p class="text-slate-400 text-lg leading-relaxed">
-                خريج ذكاء اصطناعي وعلم بيانات، وباحث في مجال الملاحة الذاتية للروبوتات الفضائية (GLEX 2025). مطور برمجيات متكاملة باقتدار في Laravel وTailwind CSS.
-            </p>
-            <div class="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
-                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-lg shadow-lg shadow-indigo-600/30 transition">تواصل معي</a>
-                <a href="mailto:ABOODGH1321@GMAIL.COM" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold px-6 py-3 rounded-lg border border-slate-700 transition">البريد الإلكتروني</a>
+    <section id="about" class="max-w-6xl mx-auto px-6 pt-24 pb-20 relative">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="space-y-6 md:w-3/5 text-right">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border-indigo-500/30 text-indigo-300 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    متاح للعمل على مشاريع مبتكرة وذكية
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.25] tracking-tight">
+                    أدمج بين قوة <br>
+                    <span class="bg-gradient-to-r from-indigo-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">الذكاء الاصطناعي</span>
+                    وهندسة البرمجيات
+                </h1>
+
+                <p class="text-slate-400 text-lg leading-relaxed font-light max-w-2xl">
+                    مهندس ذكاء اصطناعي وتطوير تطبيقات متكاملة (Full-Stack). أتمتع بخبرة واسعة من تطوير نماذج التعلم العميق والأبحاث المستقلة المعتمدة دولياً، إلى بناء منصات ويب متكاملة، آمنة ومتحملة للضغط باستعمال Laravel وTailwind CSS.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-4">
+                    <a href="#projects" class="px-7 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition shadow-xl shadow-indigo-600/25 flex items-center gap-2">
+                        استعرض الأعمال
+                        <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                    <a href="mailto:ABOODGH1321@GMAIL.COM" class="px-7 py-3.5 rounded-xl glass-card text-slate-200 hover:text-white hover:bg-slate-800/80 transition font-semibold flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        البريد الإلكتروني
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tech Badge Grid Card -->
+            <div class="md:w-2/5 w-full">
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-600/20 rounded-full blur-3xl group-hover:bg-indigo-600/30 transition"></div>
+                    <h3 class="text-slate-300 text-sm font-semibold mb-6 flex items-center justify-between">
+                        <span>الترسانة التقنية</span>
+                        <span class="text-xs text-indigo-400 font-mono">Tech Stack</span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-200 text-xs font-medium">Python</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-200 text-xs font-medium">Deep Learning</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-200 text-xs font-medium">Laravel</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-200 text-xs font-medium">Tailwind CSS</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-200 text-xs font-medium">PHP</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-200 text-xs font-medium">JavaScript</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-200 text-xs font-medium">MySQL</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-200 text-xs font-medium">RESTful APIs</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-200 text-xs font-medium">C++</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-200 text-xs font-medium">Git & GitHub</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-16">
-        <h3 class="text-2xl font-bold mb-8 text-indigo-400 flex items-center gap-2">
-            <span>💻</span> أبرز المشاريع
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="mb-12">
+            <h2 class="text-xs uppercase tracking-widest text-indigo-400 font-bold mb-2">Portfolio</h2>
+            <h3 class="text-3xl font-bold text-white">المشاريع والأعمال البرمجية</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Project 1 -->
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition">
-                <h4 class="text-xl font-bold mb-2 text-white">Coffee House</h4>
-                <p class="text-slate-400 text-sm mb-4">منصة عمل حر متكاملة تربط المستقلين بأصحاب الأعمال لتسهيل عرض الخدمات وإدارة الطلبات.</p>
-                <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-slate-700 px-2.5 py-1 rounded text-slate-300">Laravel</span>
-                    <span class="bg-slate-700 px-2.5 py-1 rounded text-slate-300">Tailwind CSS</span>
-                    <span class="bg-slate-700 px-2.5 py-1 rounded text-slate-300">Alpine.js</span>
-                    <span class="bg-slate-700 px-2.5 py-1 rounded text-slate-300">MySQL</span>
+            <div class="glass-card rounded-2xl p-7 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Full-Stack Platform</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Coffee House</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-light">
+                        منصة سوق عمل حر متكاملة للربط بين المستقلين وأصحاب الشركات. تتيح إدراج الخدمات، طلب المشاريع، والتواصل المباشر مع نظام إدارة طلبات متقدم.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Laravel</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Tailwind CSS</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Alpine.js</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">MySQL</span>
                 </div>
             </div>
+
             <!-- Project 2 -->
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition">
-                <h4 class="text-xl font-bold mb-2 text-white">RevIntel</h4>
-                <p class="text-slate-400 text-sm mb-4">نظام ذكي يلخص ويحلل آراء المراجعين للمنتجات باستخدام التعلم العميق، مدمج كإضافة متصفح Chrome.</p>
-                <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-slate-700 px-2.5 py-1 rounded text-slate-300">Python</span>
-                    <span class="bg-slate-700 px-2.5 py-1 rounded text-slate-300">LSTM</span>
-                    <span class="bg-slate-700 px-2.5 py-1 rounded text-slate-300">T5</span>
-                    <span class="bg-slate-700 px-2.5 py-1 rounded text-slate-300">Chrome Extension</span>
+            <div class="glass-card rounded-2xl p-7 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">AI & NLP Extension</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">RevIntel</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-light">
+                        محلل التقييمات الذكي المدمج كـ Chrome Extension. يقوم بتلخيص مراجعات المنتجات على متاجر التجارة الإلكترونية وتحليل انطباعات المشترين لمنح توصيات شراء فورية.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Python</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">LSTM</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">T5</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Chrome API</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="glass-card rounded-2xl p-7 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Medical AI</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Lung Disease Prediction</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-light">
+                        نظام تشخيص طبي متطور يقوم بتحليل الصور الشعاعية (X-Ray) للصدر والتنبؤ بالأمراض الرئوية باستخدام شبكات التلافيف العصبية (CNN).
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Deep Learning</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">CNN</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Medical Imaging</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="glass-card rounded-2xl p-7 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">Fuzzy Logic System</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Grade Prediction Model</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-light">
+                        نموذج ذكي يستند إلى المنطق الضبابي (Fuzzy Logic) للقياس والتنبؤ بالدرجات النهائية للطلاب بناءً على نسبة الحضور والأداء السلس وساعات الدراسة.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Fuzzy Logic</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Python</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
-        <h3 class="text-2xl font-bold mb-8 text-indigo-400 flex items-center gap-2">
-            <span>🚀</span> الأوراق البحثية (GLEX 2025)
-        </h3>
-        <div class="space-y-4">
-            <div class="bg-slate-800/30 p-5 rounded-lg border border-slate-700/40">
-                <h4 class="font-semibold text-slate-200">Artificial Intelligence in Space Exploration: Advancing Autonomous Robotics</h4>
-                <p class="text-xs text-slate-400 mt-1">Presented at GLEX 2025 - Global Space Exploration Conference (IAF)</p>
+    <!-- Research Publications Section -->
+    <section id="research" class="max-w-6xl mx-auto px-6 py-20 relative">
+        <div class="glass-card rounded-3xl p-8 md:p-12 border border-indigo-500/20 bg-gradient-to-b from-slate-900/90 to-slate-950/90">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="p-2.5 rounded-xl bg-indigo-600/20 text-indigo-400 border border-indigo-500/30">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </span>
+                <div>
+                    <h2 class="text-xs uppercase tracking-widest text-indigo-400 font-bold">Research Papers</h2>
+                    <h3 class="text-2xl font-bold text-white">الأبحاث العلمية المنشورة</h3>
+                </div>
             </div>
-            <div class="bg-slate-800/30 p-5 rounded-lg border border-slate-700/40">
-                <h4 class="font-semibold text-slate-200">Autonomous Space Missions: Revolutionizing Accuracy & Risk Mitigation</h4>
-                <p class="text-xs text-slate-400 mt-1">Presented at GLEX 2025 - Global Space Exploration Conference (IAF)</p>
+
+            <div class="space-y-6">
+                <div class="p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80 hover:border-indigo-500/30 transition">
+                    <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
+                        <span class="text-xs text-indigo-400 font-medium">GLEX 2025 - IAF Global Space Exploration Conference</span>
+                        <span class="text-xs text-slate-500">2025</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-100 mb-2">
+                        Artificial Intelligence in Space Exploration: Advancing Autonomous Robotics for Navigation and Landing in Extreme Environments
+                    </h4>
+                    <p class="text-sm text-slate-400 font-light">
+                        بحث علمي متميز يركز على الملاحة الذاتية للروبوتات الفضائية وهبوطها الآمن في البيئات القاسية والخطرة باستخدام الذكاء الاصطناعي.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80 hover:border-indigo-500/30 transition">
+                    <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
+                        <span class="text-xs text-indigo-400 font-medium">GLEX 2025 - IAF Global Space Exploration Conference</span>
+                        <span class="text-xs text-slate-500">2025</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-100 mb-2">
+                        Autonomous Space Missions: Revolutionizing Accuracy and Risk Mitigation in Extraterrestrial Exploration
+                    </h4>
+                    <p class="text-sm text-slate-400 font-light">
+                        دراسة تطرح نماذج ذكاء اصطناعي لقيادة المهمات الفضائية المستقلة لرفع دقة الاكتشاف وتقليل المخاطر التشغيلية.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer / Contact -->
-    <footer id="contact" class="max-w-6xl mx-auto px-6 py-10 border-t border-slate-800 text-center text-slate-500 text-sm">
-        <p>تواصل معي عبر البريد: <a href="mailto:ABOODGH1321@GMAIL.COM" class="text-indigo-400 underline">ABOODGH1321@GMAIL.COM</a></p>
-        <p class="mt-2">© 2026 عبد الرحمن غزال. جميع الحقوق محفوظة.</p>
+    <footer id="contact" class="max-w-6xl mx-auto px-6 py-12 border-t border-slate-800/80 text-center">
+        <div class="flex flex-col items-center gap-4">
+            <h3 class="text-2xl font-bold text-white">دعنا نعمل معا على مشروعك القادم</h3>
+            <p class="text-slate-400 text-sm">تواصل معي مباشرة لمناقشة أفكارك وتطويرها بسرعة واحترافية.</p>
+            <a href="mailto:ABOODGH1321@GMAIL.COM" class="text-indigo-400 hover:text-indigo-300 font-mono font-medium text-lg dir-ltr">
+                ABOODGH1321@GMAIL.COM
+            </a>
+        </div>
+        <p class="mt-8 text-xs text-slate-600">© 2026 عبد الرحمن غزال. جميع الحقوق محفوظة.</p>
     </footer>
 
 </body>
