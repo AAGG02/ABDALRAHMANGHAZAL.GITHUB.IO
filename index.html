@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عبد الرحمن غزال | AI & Full-Stack Engineer</title>
+    <title id="page-title">عبد الرحمن غزال | AI & Full-Stack Engineer</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,20 +99,31 @@
                     </div>
                 </div>
                 <div>
-                    <span class="font-bold text-lg text-white block leading-tight tracking-wide">عبد الرحمن غزال</span>
+                    <span id="nav-name" class="font-bold text-lg text-white block leading-tight tracking-wide">عبد الرحمن غزال</span>
                     <span class="text-[11px] text-cyan-400 font-mono tracking-wider uppercase">AI & Full-Stack Engineer</span>
                 </div>
             </a>
             
-            <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-slate-300">
-                <a href="#about" class="hover:text-cyan-400 transition">عني</a>
-                <a href="#education" class="hover:text-cyan-400 transition">التعليم والشهادات</a>
-                <a href="#research" class="hover:text-cyan-400 transition">الأبحاث</a>
-                <a href="#projects" class="hover:text-cyan-400 transition">المشاريع</a>
-                <a href="#experience" class="hover:text-cyan-400 transition">الخبرات والأنشطة</a>
-                <a href="#skills" class="hover:text-cyan-400 transition">المهارات</a>
-                <a href="#contact" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-indigo-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-bold transition shadow-lg shadow-cyan-500/20">تواصل معي</a>
-            </nav>
+            <div class="flex items-center gap-6">
+                <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-slate-300">
+                    <a href="#about" id="nav-about" class="hover:text-cyan-400 transition">عني</a>
+                    <a href="#education" id="nav-edu" class="hover:text-cyan-400 transition">التعليم والشهادات</a>
+                    <a href="#research" id="nav-research" class="hover:text-cyan-400 transition">الأبحاث</a>
+                    <a href="#projects" id="nav-projects" class="hover:text-cyan-400 transition">المشاريع</a>
+                    <a href="#experience" id="nav-exp" class="hover:text-cyan-400 transition">الخبرات والأنشطة</a>
+                    <a href="#skills" id="nav-skills" class="hover:text-cyan-400 transition">المهارات</a>
+                </nav>
+
+                <!-- Language Switcher Button -->
+                <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-lg glass-panel border border-cyan-500/40 text-cyan-400 font-mono text-xs font-bold hover:bg-cyan-500/10 transition flex items-center gap-2">
+                    <span id="lang-btn-text">English</span>
+                    <span class="text-[10px]">🌐</span>
+                </button>
+
+                <a href="#contact" id="nav-contact" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-indigo-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-bold transition shadow-lg shadow-cyan-500/20 text-xs">
+                    تواصل معي
+                </a>
+            </div>
         </div>
     </header>
 
@@ -121,43 +132,43 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <!-- Bio & Headline -->
-            <div class="lg:col-span-7 space-y-6 text-right">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border-cyan-500/30 text-cyan-400 text-xs font-mono dir-ltr">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border-cyan-500/30 text-cyan-400 text-xs font-mono">
                     <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
                     IAF GLEX 2025 RESEARCH FELLOW // FULL-STACK DEVELOPER
                 </div>
                 
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.2] tracking-tight text-white">
+                <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.2] tracking-tight text-white">
                     مهندس <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">ذكاء اصطناعي</span> <br>
                     ومطور أنظمة ويب متكاملة
                 </h1>
 
-                <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light max-w-2xl">
-                    مهندس متخصص في الذكاء الاصطناعي وعلم البيانات[cite: 7]. أملك خبرة عملية في تطوير النماذج الذكية والتعلم العميق للأبحاث الفضائية (المقيدة بنشر علمي في مؤتمر GLEX 2025)[cite: 7]، إلى جانب بناء منصات الويب الحديثة والمقيسة باستخدام Laravel وTailwind CSS[cite: 7].
+                <p id="hero-desc" class="text-slate-300 text-base sm:text-lg leading-relaxed font-light max-w-2xl">
+                    مهندس متخصص في الذكاء الاصطناعي وعلم البيانات. أملك خبرة عملية في تطوير النماذج الذكية والتعلم العميق للأبحاث الفضائية (المقيدة بنشر علمي في مؤتمر GLEX 2025)، إلى جانب بناء منصات الويب الحديثة والمقيسة باستخدام Laravel وTailwind CSS.
                 </p>
 
                 <div class="flex flex-wrap items-center gap-4 pt-2">
-                    <a href="#projects" class="px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-500 text-white font-bold transition shadow-2xl shadow-indigo-500/30 hover:scale-[1.02] active:scale-[0.98]">
+                    <a href="#projects" id="btn-projects" class="px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-500 text-white font-bold transition shadow-2xl shadow-indigo-500/30 hover:scale-[1.02] active:scale-[0.98]">
                         استعراض المشاريع
                     </a>
                     <a href="https://www.linkedin.com/in/abdalrahman-ghazal-991087236" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl glass-panel text-slate-200 hover:bg-slate-800/80 transition font-bold border border-slate-700/80 flex items-center gap-2">
-                        <span>حساب LinkedIn</span>
+                        <span id="btn-linkedin">حساب LinkedIn</span>
                         <span class="text-xs">↗</span>
                     </a>
                 </div>
 
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 text-xs font-mono text-slate-400 dir-ltr text-right">
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 text-xs font-mono text-slate-400">
                     <div class="p-3 rounded-lg glass-panel">
                         <span class="block text-cyan-400 font-bold">EMAIL:</span>
-                        <span>aboodgh1321@gmail.com</span>[cite: 7]
+                        <span>aboodgh1321@gmail.com</span>
                     </div>
                     <div class="p-3 rounded-lg glass-panel">
                         <span class="block text-cyan-400 font-bold">PHONE:</span>
-                        <span>+962 7 7608 8501</span>[cite: 7]
+                        <span>+962 7 7608 8501</span>
                     </div>
                     <div class="p-3 rounded-lg glass-panel col-span-2 sm:col-span-1">
                         <span class="block text-cyan-400 font-bold">LOCATION:</span>
-                        <span>Amman, Jordan</span>[cite: 7]
+                        <span>Amman, Jordan</span>
                     </div>
                 </div>
             </div>
@@ -170,11 +181,11 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-cyber-bg via-transparent to-transparent"></div>
                         
                         <div class="absolute bottom-4 right-4 left-4 p-4 rounded-xl glass-panel border border-cyan-500/30 backdrop-blur-xl">
-                            <div class="flex items-center justify-between dir-ltr">
-                                <span class="text-xs font-mono text-cyan-400 font-semibold">AI & DATA SCIENCE '25</span>[cite: 7]
-                                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono">TTU GRADUATE</span>[cite: 7]
+                            <div class="flex items-center justify-between font-mono">
+                                <span class="text-xs text-cyan-400 font-semibold">AI & DATA SCIENCE '25</span>
+                                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300">TTU GRADUATE</span>
                             </div>
-                            <p class="text-xs text-slate-300 mt-1 font-sans text-right">بكالوريوس الذكاء الاصطناعي وعلم البيانات - جامعة الطفيلة التقنية</p>[cite: 7]
+                            <p id="img-caption" class="text-xs text-slate-300 mt-1 font-sans">بكالوريوس الذكاء الاصطناعي وعلم البيانات - جامعة الطفيلة التقنية</p>
                         </div>
                     </div>
                 </div>
@@ -186,7 +197,7 @@
     <!-- Education Section -->
     <section id="education" class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800/60">
         <div class="mb-12">
-            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+            <h2 id="sec-edu-title" class="text-3xl font-bold text-white flex items-center gap-3">
                 <span class="text-cyan-400 font-mono text-xl">01.</span> التعليم والشهادات التدريبية
             </h2>
         </div>
@@ -194,54 +205,54 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Bachelor -->
             <div class="p-6 rounded-2xl glass-panel glow-border space-y-3">
-                <div class="flex justify-between items-start dir-ltr">
-                    <span class="text-xs font-mono px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">2021 - 2025</span>[cite: 7]
-                    <span class="text-xs text-slate-400">Tafila Technical University</span>[cite: 7]
+                <div class="flex justify-between items-start font-mono text-xs">
+                    <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">2021 - 2025</span>
+                    <span class="text-slate-400">Tafila Technical University</span>
                 </div>
-                <h3 class="text-xl font-bold text-white">بكالوريوس الذكاء الاصطناعي وعلم البيانات</h3>[cite: 7]
-                <p class="text-sm text-slate-300">جامعة الطفيلة التقنية - الطفيلة، الأردن</p>[cite: 7]
+                <h3 id="edu-1-title" class="text-xl font-bold text-white">بكالوريوس الذكاء الاصطناعي وعلم البيانات</h3>
+                <p id="edu-1-sub" class="text-sm text-slate-300">جامعة الطفيلة التقنية - الطفيلة، الأردن</p>
                 <div class="pt-2 text-xs text-slate-400 space-y-1">
-                    <span class="block font-semibold text-slate-200">المساقات الأساسية:</span>[cite: 7]
-                    <p class="font-mono text-cyan-300">Machine Learning, Deep Learning, NLP, Big Data</p>[cite: 7]
+                    <span id="edu-1-core" class="block font-semibold text-slate-200">المساقات الأساسية:</span>
+                    <p class="font-mono text-cyan-300">Machine Learning, Deep Learning, NLP, Big Data</p>
                 </div>
             </div>
 
             <!-- Full Stack Certification -->
             <div class="p-6 rounded-2xl glass-panel glow-border space-y-3">
-                <div class="flex justify-between items-start dir-ltr">
-                    <span class="text-xs font-mono px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">May 2026 - Sep 2026</span>[cite: 7]
-                    <span class="text-xs text-slate-400">MODEE</span>[cite: 7]
+                <div class="flex justify-between items-start font-mono text-xs">
+                    <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">May 2026 - Sep 2026</span>
+                    <span class="text-slate-400">MODEE</span>
                 </div>
-                <h3 class="text-xl font-bold text-white">شهادة تطوير الويب الشامل (Full-Stack)</h3>[cite: 7]
-                <p class="text-sm text-slate-300">وزارة الاقتصاد الرقمي والريادة (MODEE)</p>[cite: 7]
-                <p class="text-xs text-slate-400">برنامج مكثف مدته 5 أشهر لتطوير معمارية النظم الخلفية القابلة للتوسع وبناء واجهات المستخدم التفاعلية.</p>[cite: 7]
-                <div class="pt-1 flex flex-wrap gap-2 dir-ltr">
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Laravel</span>[cite: 7]
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Tailwind CSS</span>[cite: 7]
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">PHP</span>[cite: 7]
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">MySQL</span>[cite: 7]
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">RESTful APIs</span>[cite: 7]
+                <h3 id="edu-2-title" class="text-xl font-bold text-white">شهادة تطوير الويب الشامل (Full-Stack)</h3>
+                <p id="edu-2-sub" class="text-sm text-slate-300">وزارة الاقتصاد الرقمي والريادة (MODEE)</p>
+                <p id="edu-2-desc" class="text-xs text-slate-400">برنامج مكثف مدته 5 أشهر لتطوير معمارية النظم الخلفية القابلة للتوسع وبناء واجهات المستخدم التفاعلية.</p>
+                <div class="pt-1 flex flex-wrap gap-2 font-mono">
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Laravel</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Tailwind CSS</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">PHP</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">MySQL</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">RESTful APIs</span>
                 </div>
             </div>
 
             <!-- Correlation One -->
             <div class="p-6 rounded-2xl glass-panel space-y-3">
-                <div class="flex justify-between items-start dir-ltr">
-                    <span class="text-xs font-mono px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Mar 2024 - Oct 2024</span>[cite: 7]
-                    <span class="text-xs text-slate-400">Correlation One</span>[cite: 7]
+                <div class="flex justify-between items-start font-mono text-xs">
+                    <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Mar 2024 - Oct 2024</span>
+                    <span class="text-slate-400">Correlation One</span>
                 </div>
-                <h3 class="text-lg font-bold text-white">برنامج Data Science for All</h3>[cite: 7]
-                <p class="text-xs text-slate-300">تدريب مكثف في تحليل البيانات، التعلم الآلي، وتصور البيانات مع المشاركة في مشاريع ومسابقات عالمية.</p>[cite: 7]
+                <h3 id="edu-3-title" class="text-lg font-bold text-white">برنامج Data Science for All</h3>
+                <p id="edu-3-desc" class="text-xs text-slate-300">تدريب مكثف في تحليل البيانات، التعلم الآلي، وتصور البيانات مع المشاركة في مشاريع ومسابقات عالمية.</p>
             </div>
 
             <!-- English Certification -->
             <div class="p-6 rounded-2xl glass-panel space-y-3">
-                <div class="flex justify-between items-start dir-ltr">
-                    <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Jul 2022 - Oct 2024</span>[cite: 7]
-                    <span class="text-xs text-slate-400">University of Jordan</span>[cite: 7]
+                <div class="flex justify-between items-start font-mono text-xs">
+                    <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Jul 2022 - Oct 2024</span>
+                    <span class="text-slate-400">University of Jordan</span>
                 </div>
-                <h3 class="text-lg font-bold text-white">شهادة اللغة الإنجليزية (المستويات 1-5)</h3>[cite: 7]
-                <p class="text-xs text-slate-300">مركز اللغات - الجامعة الأردنية (150 ساعة تدريبية - بتقدير جيد).</p>[cite: 7]
+                <h3 id="edu-4-title" class="text-lg font-bold text-white">شهادة اللغة الإنجليزية (المستويات 1-5)</h3>
+                <p id="edu-4-desc" class="text-xs text-slate-300">مركز اللغات - الجامعة الأردنية (150 ساعة تدريبية - بتقدير جيد).</p>
             </div>
         </div>
     </section>
@@ -249,27 +260,27 @@
     <!-- Research Publications -->
     <section id="research" class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800/60">
         <div class="mb-12">
-            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+            <h2 id="sec-research-title" class="text-3xl font-bold text-white flex items-center gap-3">
                 <span class="text-cyan-400 font-mono text-xl">02.</span> الأبحاث العلمية المنشورة
             </h2>
-            <p class="text-slate-400 text-sm mt-2">الأبحاث العلمية المنشورة والمقدمة في المؤتمر الدولي لاستكشاف الفضاء (GLEX 2025)</p>[cite: 7]
+            <p id="sec-research-sub" class="text-slate-400 text-sm mt-2">الأبحاث العلمية المنشورة والمقدمة في المؤتمر الدولي لاستكشاف الفضاء (GLEX 2025)</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 dir-ltr text-left">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="p-6 rounded-2xl glass-panel border border-cyan-500/20 space-y-3">
-                <div class="text-xs font-mono text-cyan-400">RESEARCH PAPER 01 // GLEX 2025</div>[cite: 7]
+                <div class="text-xs font-mono text-cyan-400">RESEARCH PAPER 01 // GLEX 2025</div>
                 <h3 class="text-lg font-bold text-white leading-snug">
                     "Artificial Intelligence in Space Exploration: Advancing Autonomous Robotics for Navigation and Landing in Extreme Environments"
-                </h3>[cite: 7]
-                <p class="text-xs text-slate-400">Organized by International Astronautical Federation (IAF) - 2025</p>[cite: 7]
+                </h3>
+                <p class="text-xs text-slate-400">Organized by International Astronautical Federation (IAF) - 2025</p>
             </div>
 
             <div class="p-6 rounded-2xl glass-panel border border-purple-500/20 space-y-3">
-                <div class="text-xs font-mono text-purple-400">RESEARCH PAPER 02 // GLEX 2025</div>[cite: 7]
+                <div class="text-xs font-mono text-purple-400">RESEARCH PAPER 02 // GLEX 2025</div>
                 <h3 class="text-lg font-bold text-white leading-snug">
                     "Autonomous Space Missions: Revolutionizing Accuracy and Risk Mitigation in Extraterrestrial Exploration"
-                </h3>[cite: 7]
-                <p class="text-xs text-slate-400">Organized by International Astronautical Federation (IAF) - 2025</p>[cite: 7]
+                </h3>
+                <p class="text-xs text-slate-400">Organized by International Astronautical Federation (IAF) - 2025</p>
             </div>
         </div>
     </section>
@@ -277,7 +288,7 @@
     <!-- Projects Section -->
     <section id="projects" class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800/60">
         <div class="mb-12">
-            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+            <h2 id="sec-projects-title" class="text-3xl font-bold text-white flex items-center gap-3">
                 <span class="text-cyan-400 font-mono text-xl">03.</span> المشاريع البرمجية والأنظمة
             </h2>
         </div>
@@ -285,68 +296,68 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Coffee House -->
             <div class="p-6 rounded-2xl glass-panel glow-border space-y-4">
-                <div class="flex justify-between items-center dir-ltr">
-                    <span class="text-xs font-mono text-cyan-400">FULL-STACK PLATFORM</span>
-                    <span class="text-xs font-mono bg-cyan-500/10 px-2 py-1 rounded text-cyan-300">2026</span>
+                <div class="flex justify-between items-center font-mono">
+                    <span class="text-xs text-cyan-400">FULL-STACK PLATFORM</span>
+                    <span class="text-xs bg-cyan-500/10 px-2 py-1 rounded text-cyan-300">2026</span>
                 </div>
-                <h3 class="text-2xl font-bold text-white">COFFEE HOUSE - Freelance Marketplace</h3>[cite: 7]
-                <p class="text-sm text-slate-300 leading-relaxed">
+                <h3 class="text-2xl font-bold text-white">COFFEE HOUSE - Freelance Marketplace</h3>
+                <p id="proj-1-desc" class="text-sm text-slate-300 leading-relaxed">
                     منصة ويب متكاملة تربط المستقلين بأصحاب الأعمال لتسهيل إضافة الخدمات، إدارة الطلبات، والتعاون في المشاريع.
-                </p>[cite: 7]
-                <div class="flex flex-wrap gap-2 dir-ltr">
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Laravel</span>[cite: 7]
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Tailwind CSS</span>[cite: 7]
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Alpine.js</span>[cite: 7]
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">MySQL</span>[cite: 7]
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">REST APIs</span>[cite: 7]
+                </p>
+                <div class="flex flex-wrap gap-2 font-mono">
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Laravel</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Tailwind CSS</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Alpine.js</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">MySQL</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">REST APIs</span>
                 </div>
             </div>
 
             <!-- RevIntel -->
             <div class="p-6 rounded-2xl glass-panel glow-border space-y-4">
-                <div class="flex justify-between items-center dir-ltr">
-                    <span class="text-xs font-mono text-purple-400">AI / CHROME EXTENSION</span>
+                <div class="flex justify-between items-center font-mono">
+                    <span class="text-xs text-purple-400">AI / CHROME EXTENSION</span>
                 </div>
-                <h3 class="text-2xl font-bold text-white">REVINTEL - Intelligent Review Analyzer</h3>[cite: 7]
-                <p class="text-sm text-slate-300 leading-relaxed">
+                <h3 class="text-2xl font-bold text-white">REVINTEL - Intelligent Review Analyzer</h3>
+                <p id="proj-2-desc" class="text-sm text-slate-300 leading-relaxed">
                     نظام ذكي لتلخيص وتحليل مراجعات المنتجات للتجارة الإلكترونية باستخدام نماذج التعلم العميق، وتم بناء المشروع كإضافة متصفح Chrome لتقديم توصيات الشراء بناءً على تحليل المشاعر.
-                </p>[cite: 7]
-                <div class="flex flex-wrap gap-2 dir-ltr">
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Python</span>[cite: 7]
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">LSTM</span>[cite: 7]
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">T5</span>[cite: 7]
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Chrome Extension</span>[cite: 7]
+                </p>
+                <div class="flex flex-wrap gap-2 font-mono">
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Python</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">LSTM</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">T5</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Chrome Extension</span>
                 </div>
             </div>
 
             <!-- Lung Disease Prediction -->
             <div class="p-6 rounded-2xl glass-panel space-y-4">
-                <div class="flex justify-between items-center dir-ltr">
-                    <span class="text-xs font-mono text-indigo-400">DEEP LEARNING / MEDICAL</span>
+                <div class="flex justify-between items-center font-mono">
+                    <span class="text-xs text-indigo-400">DEEP LEARNING / MEDICAL</span>
                 </div>
-                <h3 class="text-xl font-bold text-white">Lung Disease Prediction System</h3>[cite: 7]
-                <p class="text-sm text-slate-300 leading-relaxed">
+                <h3 class="text-xl font-bold text-white">Lung Disease Prediction System</h3>
+                <p id="proj-3-desc" class="text-sm text-slate-300 leading-relaxed">
                     نظام تحليل صور الأشعة السينية للصدر (X-Ray) للتنبؤ بأمراض الرئة باستخدام الشبكات العصبية الالتفافية (CNN) لدعم التشخيص الطبي المبكر.
-                </p>[cite: 7]
-                <div class="flex flex-wrap gap-2 dir-ltr">
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">CNN</span>[cite: 7]
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Medical Imaging</span>[cite: 7]
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Deep Learning</span>[cite: 7]
+                </p>
+                <div class="flex flex-wrap gap-2 font-mono">
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">CNN</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Medical Imaging</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Deep Learning</span>
                 </div>
             </div>
 
             <!-- Fuzzy Logic -->
             <div class="p-6 rounded-2xl glass-panel space-y-4">
-                <div class="flex justify-between items-center dir-ltr">
-                    <span class="text-xs font-mono text-emerald-400">FUZZY SYSTEMS</span>
+                <div class="flex justify-between items-center font-mono">
+                    <span class="text-xs text-emerald-400">FUZZY SYSTEMS</span>
                 </div>
-                <h3 class="text-xl font-bold text-white">Exam Grade Prediction via Fuzzy Logic</h3>[cite: 7]
-                <p class="text-sm text-slate-300 leading-relaxed">
+                <h3 class="text-xl font-bold text-white">Exam Grade Prediction via Fuzzy Logic</h3>
+                <p id="proj-4-desc" class="text-sm text-slate-300 leading-relaxed">
                     نظام يعتمد على المنطق الضبابي للتنبؤ بالمعدل والدرجة النهائية للطلاب بناءً على الحضور، الأداء السابق، وساعات الدراسة للتعامل مع معطيات غير المؤكدة.
-                </p>[cite: 7]
-                <div class="flex flex-wrap gap-2 dir-ltr">
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Fuzzy Logic</span>[cite: 7]
-                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Python</span>[cite: 7]
+                </p>
+                <div class="flex flex-wrap gap-2 font-mono">
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Fuzzy Logic</span>
+                    <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Python</span>
                 </div>
             </div>
         </div>
@@ -355,7 +366,7 @@
     <!-- Experience & Leadership Section -->
     <section id="experience" class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800/60">
         <div class="mb-12">
-            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+            <h2 id="sec-exp-title" class="text-3xl font-bold text-white flex items-center gap-3">
                 <span class="text-cyan-400 font-mono text-xl">04.</span> الخبرات العملية والقيادة
             </h2>
         </div>
@@ -364,69 +375,69 @@
             <!-- CSMENA -->
             <div class="p-6 rounded-2xl glass-panel flex flex-col md:flex-row justify-between gap-4">
                 <div>
-                    <h3 class="text-lg font-bold text-white">English Customer Service Representative — CSMENA</h3>[cite: 7]
-                    <p class="text-xs text-slate-400">Delayed Cases Department</p>[cite: 7]
+                    <h3 class="text-lg font-bold text-white">English Customer Service Representative — CSMENA</h3>
+                    <p class="text-xs text-slate-400">Delayed Cases Department</p>
                 </div>
-                <span class="text-xs font-mono text-cyan-400 dir-ltr">Oct 2025 - Dec 2025</span>[cite: 7]
+                <span class="text-xs font-mono text-cyan-400">Oct 2025 - Dec 2025</span>
             </div>
 
             <!-- Menaitech -->
             <div class="p-6 rounded-2xl glass-panel flex flex-col md:flex-row justify-between gap-4">
                 <div>
-                    <h3 class="text-lg font-bold text-white">AI Intern — Menaitech</h3>[cite: 7]
-                    <p class="text-xs text-slate-400">تدريب عملي على مشاريع الذكاء الاصطناعي وعلم البيانات المرتبطة بسوق العمل.</p>[cite: 7]
+                    <h3 class="text-lg font-bold text-white">AI Intern — Menaitech</h3>
+                    <p id="exp-2-desc" class="text-xs text-slate-400">تدريب عملي على مشاريع الذكاء الاصطناعي وعلم البيانات المرتبطة بسوق العمل.</p>
                 </div>
-                <span class="text-xs font-mono text-cyan-400 dir-ltr">Jul 2025 - Sep 2025</span>[cite: 7]
+                <span class="text-xs font-mono text-cyan-400">Jul 2025 - Sep 2025</span>
             </div>
 
             <!-- Partnership Leader IEEE -->
             <div class="p-6 rounded-2xl glass-panel flex flex-col md:flex-row justify-between gap-4">
                 <div>
-                    <h3 class="text-lg font-bold text-white">Partnership Leader — IEEE SAC Jordan</h3>[cite: 7]
-                    <p class="text-xs text-slate-400">قيادة الشراكات الاستراتيجية وجلب الرعايات مع الشركات الوطنية لدعم أنشطة IEEE في الأردن.</p>[cite: 7]
+                    <h3 class="text-lg font-bold text-white">Partnership Leader — IEEE SAC Jordan</h3>
+                    <p id="exp-3-desc" class="text-xs text-slate-400">قيادة الشراكات الاستراتيجية وجلب الرعايات مع الشركات الوطنية لدعم أنشطة IEEE في الأردن.</p>
                 </div>
-                <span class="text-xs font-mono text-cyan-400 dir-ltr">May 2025 - Oct 2025</span>[cite: 7]
+                <span class="text-xs font-mono text-cyan-400">May 2025 - Oct 2025</span>
             </div>
 
             <!-- Khuyot Agency -->
             <div class="p-6 rounded-2xl glass-panel flex flex-col md:flex-row justify-between gap-4">
                 <div>
-                    <h3 class="text-lg font-bold text-white">Co-Founder — Khuyot Agency</h3>[cite: 7]
-                    <p class="text-xs text-slate-400">تأسيس وكالة إبداعية متخصصة في الهوية البصرية والتسويق واستراتيجيات المحتوى الرقمي.</p>[cite: 7]
+                    <h3 class="text-lg font-bold text-white">Co-Founder — Khuyot Agency</h3>
+                    <p id="exp-4-desc" class="text-xs text-slate-400">تأسيس وكالة إبداعية متخصصة في الهوية البصرية والتسويق واستراتيجيات المحتوى الرقمي.</p>
                 </div>
-                <span class="text-xs font-mono text-cyan-400 dir-ltr">Oct 2024 - July 2025</span>[cite: 7]
+                <span class="text-xs font-mono text-cyan-400">Oct 2024 - July 2025</span>
             </div>
 
             <!-- FACT / JIB -->
             <div class="p-6 rounded-2xl glass-panel flex flex-col md:flex-row justify-between gap-4">
                 <div>
-                    <h3 class="text-lg font-bold text-white">Intern — Future Applied Technologies (FACT) / Jordan Islamic Bank</h3>[cite: 7]
-                    <p class="text-xs text-slate-400">تطوير مشاريع تقنية حقيقية بالتعاون مع البنك الإسلامي الأردني.</p>[cite: 7]
+                    <h3 class="text-lg font-bold text-white">Intern — Future Applied Technologies (FACT) / Jordan Islamic Bank</h3>
+                    <p id="exp-5-desc" class="text-xs text-slate-400">تطوير مشاريع تقنية حقيقية بالتعاون مع البنك الإسلامي الأردني.</p>
                 </div>
-                <span class="text-xs font-mono text-cyan-400 dir-ltr">Jul 2024 - Dec 2024</span>[cite: 7]
+                <span class="text-xs font-mono text-cyan-400">Jul 2024 - Dec 2024</span>
             </div>
 
             <!-- TEDx TTU -->
             <div class="p-6 rounded-2xl glass-panel flex flex-col md:flex-row justify-between gap-4">
                 <div>
-                    <h3 class="text-lg font-bold text-white">Co-Founder — TEDx TTU</h3>[cite: 7]
-                    <p class="text-xs text-slate-400">تأسيس حدث TEDx في جامعة الطفيلة التقنية وتنظيم وتنسيق اختيار المتحدثين.</p>[cite: 7]
+                    <h3 class="text-lg font-bold text-white">Co-Founder — TEDx TTU</h3>
+                    <p id="exp-6-desc" class="text-xs text-slate-400">تأسيس حدث TEDx في جامعة الطفيلة التقنية وتنظيم وتنسيق اختيار المتحدثين.</p>
                 </div>
-                <span class="text-xs font-mono text-cyan-400 dir-ltr">Dec 2023 - Oct 2024</span>[cite: 7]
+                <span class="text-xs font-mono text-cyan-400">Dec 2023 - Oct 2024</span>
             </div>
 
             <!-- IEEE Pitchinno & Region 8 Ambassador -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                 <div class="p-5 rounded-2xl glass-panel space-y-2">
-                    <h4 class="font-bold text-white text-sm">Head of Program Management — IEEE PITCHINNO</h4>[cite: 7]
-                    <p class="text-xs text-slate-400">إدارة اللوجستيات والتنفيذ لأكبر مسابقة ريادية طلابية على مستوى الجامعات الأردنية.</p>[cite: 7]
-                    <span class="text-[11px] font-mono text-indigo-400 block dir-ltr">Oct 2023 - May 2024</span>[cite: 7]
+                    <h4 class="font-bold text-white text-sm">Head of Program Management — IEEE PITCHINNO</h4>
+                    <p id="exp-7-desc" class="text-xs text-slate-400">إدارة اللوجستيات والتنفيذ لأكبر مسابقة ريادية طلابية على مستوى الجامعات الأردنية.</p>
+                    <span class="text-[11px] font-mono text-indigo-400 block">Oct 2023 - May 2024</span>
                 </div>
 
                 <div class="p-5 rounded-2xl glass-panel space-y-2">
-                    <h4 class="font-bold text-white text-sm">Ambassador & "Best Ambassador" — IEEE Region 8</h4>[cite: 7]
-                    <p class="text-xs text-slate-400">تعزيز الابتكار وريادة الأعمال والحصول على تكريم "أفضل سفير" في إقليم المنطقة 8.</p>[cite: 7]
-                    <span class="text-[11px] font-mono text-indigo-400 block dir-ltr">May 2023 - May 2024</span>[cite: 7]
+                    <h4 class="font-bold text-white text-sm">Ambassador & "Best Ambassador" — IEEE Region 8</h4>
+                    <p id="exp-8-desc" class="text-xs text-slate-400">تعزيز الابتكار وريادة الأعمال والحصول على تكريم "أفضل سفير" في إقليم المنطقة 8.</p>
+                    <span class="text-[11px] font-mono text-indigo-400 block">May 2023 - May 2024</span>
                 </div>
             </div>
         </div>
@@ -435,42 +446,42 @@
     <!-- Skills Section -->
     <section id="skills" class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800/60">
         <div class="mb-12">
-            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+            <h2 id="sec-skills-title" class="text-3xl font-bold text-white flex items-center gap-3">
                 <span class="text-cyan-400 font-mono text-xl">05.</span> المهارات التقنية والتنفيذية
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 dir-ltr text-left">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Web & Frameworks -->
             <div class="p-6 rounded-2xl glass-panel space-y-4">
-                <h3 class="text-lg font-bold text-cyan-400">Web & Frameworks</h3>[cite: 7]
+                <h3 class="text-lg font-bold text-cyan-400">Web & Frameworks</h3>
                 <ul class="space-y-2 text-sm text-slate-300 font-mono">
-                    <li class="flex items-center gap-2"><span>▹</span> Laravel</li>[cite: 7]
-                    <li class="flex items-center gap-2"><span>▹</span> Tailwind CSS</li>[cite: 7]
-                    <li class="flex items-center gap-2"><span>▹</span> REST APIs</li>[cite: 7]
-                    <li class="flex items-center gap-2"><span>▹</span> HTML5 / CSS3</li>[cite: 7]
+                    <li class="flex items-center gap-2"><span>▹</span> Laravel</li>
+                    <li class="flex items-center gap-2"><span>▹</span> Tailwind CSS</li>
+                    <li class="flex items-center gap-2"><span>▹</span> REST APIs</li>
+                    <li class="flex items-center gap-2"><span>▹</span> HTML5 / CSS3</li>
                 </ul>
             </div>
 
             <!-- Languages & Tools -->
             <div class="p-6 rounded-2xl glass-panel space-y-4">
-                <h3 class="text-lg font-bold text-purple-400">Languages & Tools</h3>[cite: 7]
+                <h3 class="text-lg font-bold text-purple-400">Languages & Tools</h3>
                 <ul class="space-y-2 text-sm text-slate-300 font-mono">
-                    <li class="flex items-center gap-2"><span>▹</span> Python / C++ / Java / PHP</li>[cite: 7]
-                    <li class="flex items-center gap-2"><span>▹</span> Google Colab / Jupyter</li>[cite: 7]
-                    <li class="flex items-center gap-2"><span>▹</span> VS Code / Git</li>[cite: 7]
-                    <li class="flex items-center gap-2"><span>▹</span> AI Tools & Libraries</li>[cite: 7]
+                    <li class="flex items-center gap-2"><span>▹</span> Python / C++ / Java / PHP</li>
+                    <li class="flex items-center gap-2"><span>▹</span> Google Colab / Jupyter</li>
+                    <li class="flex items-center gap-2"><span>▹</span> VS Code / Git</li>
+                    <li class="flex items-center gap-2"><span>▹</span> AI Tools & Libraries</li>
                 </ul>
             </div>
 
             <!-- Soft Skills -->
-            <div class="p-6 rounded-2xl glass-panel space-y-4 dir-rtl text-right">
-                <h3 class="text-lg font-bold text-indigo-400">المهارات الشخصية</h3>[cite: 7]
+            <div class="p-6 rounded-2xl glass-panel space-y-4">
+                <h3 id="soft-skills-title" class="text-lg font-bold text-indigo-400">المهارات الشخصية</h3>
                 <ul class="space-y-2 text-sm text-slate-300">
-                    <li class="flex items-center gap-2"><span>•</span> حل المشكلات والتفكير التحليلي</li>[cite: 7]
-                    <li class="flex items-center gap-2"><span>•</span> الخطابة العامة والكتابة التقنية</li>[cite: 7]
-                    <li class="flex items-center gap-2"><span>•</span> التخطيط الاستراتيجي وإدارة المشاريع</li>[cite: 7]
-                    <li class="flex items-center gap-2"><span>•</span> القيادة وإدارة الفرق</li>[cite: 7]
+                    <li class="flex items-center gap-2"><span id="s1">•</span> <span id="sk-1">حل المشكلات والتفكير التحليلي</span></li>
+                    <li class="flex items-center gap-2"><span id="s2">•</span> <span id="sk-2">الخطابة العامة والكتابة التقنية</span></li>
+                    <li class="flex items-center gap-2"><span id="s3">•</span> <span id="sk-3">التخطيط الاستراتيجي وإدارة المشاريع</span></li>
+                    <li class="flex items-center gap-2"><span id="s4">•</span> <span id="sk-4">القيادة وإدارة الفرق</span></li>
                 </ul>
             </div>
         </div>
@@ -478,18 +489,18 @@
 
     <!-- Footer / Contact -->
     <footer id="contact" class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800/80 text-center space-y-6">
-        <h2 class="text-3xl font-black text-white">هل لديك مشروع أو فرصة تعاون؟</h2>
-        <p class="text-slate-400 text-sm max-w-lg mx-auto">
+        <h2 id="footer-title" class="text-3xl font-black text-white">هل لديك مشروع أو فرصة تعاون؟</h2>
+        <p id="footer-desc" class="text-slate-400 text-sm max-w-lg mx-auto">
             متاح للعمل على بناء الأنظمة الذكية، حلول الويب القابلة للتوسع، أو المشاركة في الأبحاث والمشاريع التقنية.
         </p>
         
-        <div class="flex justify-center items-center gap-6 dir-ltr pt-4">
-            <a href="mailto:aboodgh1321@gmail.com" class="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-bold text-sm hover:scale-105 transition">
+        <div class="flex justify-center items-center gap-6 pt-4">
+            <a href="mailto:aboodgh1321@gmail.com" id="btn-email" class="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-bold text-sm hover:scale-105 transition">
                 أرسل بريداً إلكترونياً
-            </a>[cite: 7]
+            </a>
             <a href="https://www.linkedin.com/in/abdalrahman-ghazal-991087236" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl glass-panel text-slate-200 font-bold text-sm border border-slate-700 hover:bg-slate-800 transition">
                 LinkedIn Profile
-            </a>[cite: 7]
+            </a>
         </div>
 
         <div class="pt-12 text-xs text-slate-600 font-mono">
@@ -497,8 +508,187 @@
         </div>
     </footer>
 
-    <!-- Interactive Canvas Script -->
+    <!-- Interactive Canvas & Language Toggle Script -->
     <script>
+        // Language Translations Data
+        const translations = {
+            ar: {
+                pageTitle: "عبد الرحمن غزال | AI & Full-Stack Engineer",
+                navName: "عبد الرحمن غزال",
+                navAbout: "عني",
+                navEdu: "التعليم والشهادات",
+                navResearch: "الأبحاث",
+                navProjects: "المشاريع",
+                navExp: "الخبرات والأنشطة",
+                navSkills: "المهارات",
+                navContact: "تواصل معي",
+                langBtn: "English",
+                heroTitle: 'مهندس <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">ذكاء اصطناعي</span> <br> ومطور أنظمة ويب متكاملة',
+                heroDesc: "مهندس متخصص في الذكاء الاصطناعي وعلم البيانات. أملك خبرة عملية في تطوير النماذج الذكية والتعلم العميق للأبحاث الفضائية (المقيدة بنشر علمي في مؤتمر GLEX 2025)، إلى جانب بناء منصات الويب الحديثة والمقيسة باستخدام Laravel وTailwind CSS.",
+                btnProjects: "استعراض المشاريع",
+                btnLinkedin: "حساب LinkedIn",
+                imgCaption: "بكالوريوس الذكاء الاصطناعي وعلم البيانات - جامعة الطفيلة التقنية",
+                secEduTitle: '<span class="text-cyan-400 font-mono text-xl">01.</span> التعليم والشهادات التدريبية',
+                edu1Title: "بكالوريوس الذكاء الاصطناعي وعلم البيانات",
+                edu1Sub: "جامعة الطفيلة التقنية - الطفيلة، الأردن",
+                edu1Core: "المساقات الأساسية:",
+                edu2Title: "شهادة تطوير الويب الشامل (Full-Stack)",
+                edu2Sub: "وزارة الاقتصاد الرقمي والريادة (MODEE)",
+                edu2Desc: "برنامج مكثف مدته 5 أشهر لتطوير معمارية النظم الخلفية القابلة للتوسع وبناء واجهات المستخدم التفاعلية.",
+                edu3Title: "برنامج Data Science for All",
+                edu3Desc: "تدريب مكثف في تحليل البيانات، التعلم الآلي، وتصور البيانات مع المشاركة في مشاريع ومسابقات عالمية.",
+                edu4Title: "شهادة اللغة الإنجليزية (المستويات 1-5)",
+                edu4Desc: "مركز اللغات - الجامعة الأردنية (150 ساعة تدريبية - بتقدير جيد).",
+                secResearchTitle: '<span class="text-cyan-400 font-mono text-xl">02.</span> الأبحاث العلمية المنشورة',
+                secResearchSub: "الأبحاث العلمية المنشورة والمقدمة في المؤتمر الدولي لاستكشاف الفضاء (GLEX 2025)",
+                secProjectsTitle: '<span class="text-cyan-400 font-mono text-xl">03.</span> المشاريع البرمجية والأنظمة',
+                proj1Desc: "منصة ويب متكاملة تربط المستقلين بأصحاب الأعمال لتسهيل إضافة الخدمات، إدارة الطلبات، والتعاون في المشاريع.",
+                proj2Desc: "نظام ذكي لتلخيص وتحليل مراجعات المنتجات للتجارة الإلكترونية باستخدام نماذج التعلم العميق، وتم بناء المشروع كإضافة متصفح Chrome لتقديم توصيات الشراء بناءً على تحليل المشاعر.",
+                proj3Desc: "نظام تحليل صور الأشعة السينية للصدر (X-Ray) للتنبؤ بأمراض الرئة باستخدام الشبكات العصبية الالتفافية (CNN) لدعم التشخيص الطبي المبكر.",
+                proj4Desc: "نظام يعتمد على المنطق الضبابي للتنبؤ بالمعدل والدرجة النهائية للطلاب بناءً على الحضور، الأداء السابق، وساعات الدراسة للتعامل مع معطيات غير المؤكدة.",
+                secExpTitle: '<span class="text-cyan-400 font-mono text-xl">04.</span> الخبرات العملية والقيادة',
+                exp2Desc: "تدريب عملي على مشاريع الذكاء الاصطناعي وعلم البيانات المرتبطة بسوق العمل.",
+                exp3Desc: "قيادة الشراكات الاستراتيجية وجلب الرعايات مع الشركات الوطنية لدعم أنشطة IEEE في الأردن.",
+                exp4Desc: "تأسيس وكالة إبداعية متخصصة في الهوية البصرية والتسويق واستراتيجيات المحتوى الرقمي.",
+                exp5Desc: "تطوير مشاريع تقنية حقيقية بالتعاون مع البنك الإسلامي الأردني.",
+                exp6Desc: "تأسيس حدث TEDx في جامعة الطفيلة التقنية وتنظيم وتنسيق اختيار المتحدثين.",
+                exp7Desc: "إدارة اللوجستيات والتنفيذ لأكبر مسابقة ريادية طلابية على مستوى الجامعات الأردنية.",
+                exp8Desc: "تعزيز الابتكار وريادة الأعمال والحصول على تكريم \"أفضل سفير\" في إقليم المنطقة 8.",
+                secSkillsTitle: '<span class="text-cyan-400 font-mono text-xl">05.</span> المهارات التقنية والتنفيذية',
+                softSkillsTitle: "المهارات الشخصية",
+                sk1: "حل المشكلات والتفكير التحليلي",
+                sk2: "الخطابة العامة والكتابة التقنية",
+                sk3: "التخطيط الاستراتيجي وإدارة المشاريع",
+                sk4: "القيادة وإدارة الفرق",
+                footerTitle: "هل لديك مشروع أو فرصة تعاون؟",
+                footerDesc: "متاح للعمل على بناء الأنظمة الذكية، حلول الويب القابلة للتوسع، أو المشاركة في الأبحاث والمشاريع التقنية.",
+                btnEmail: "أرسل بريداً إلكترونياً"
+            },
+            en: {
+                pageTitle: "Abdalrahman Ghazal | AI & Full-Stack Engineer",
+                navName: "Abdalrahman Ghazal",
+                navAbout: "About",
+                navEdu: "Education",
+                navResearch: "Research",
+                navProjects: "Projects",
+                navExp: "Experience",
+                navSkills: "Skills",
+                navContact: "Contact Me",
+                langBtn: "عربي",
+                heroTitle: '<span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">AI Engineer</span> <br> & Full-Stack Developer',
+                heroDesc: "Engineer specializing in Artificial Intelligence & Data Science. Proven hands-on experience in developing smart models and deep learning for space exploration research (accepted at IAF GLEX 2025 conference), alongside building modern, scalable web platforms using Laravel & Tailwind CSS.",
+                btnProjects: "View Projects",
+                btnLinkedin: "LinkedIn Profile",
+                imgCaption: "B.Sc. Artificial Intelligence & Data Science - TTU",
+                secEduTitle: '<span class="text-cyan-400 font-mono text-xl">01.</span> Education & Training',
+                edu1Title: "B.Sc. in Artificial Intelligence & Data Science",
+                edu1Sub: "Tafila Technical University - Tafila, Jordan",
+                edu1Core: "Core Coursework:",
+                edu2Title: "Full-Stack Web Development Certificate",
+                edu2Sub: "Ministry of Digital Economy and Entrepreneurship (MODEE)",
+                edu2Desc: "An intensive 5-month program focused on developing scalable backend architectures and building interactive frontend UIs.",
+                edu3Title: "Data Science for All Program",
+                edu3Desc: "Intensive training in data analytics, machine learning, and data visualization with participation in global projects.",
+                edu4Title: "English Language Certification (Levels 1-5)",
+                edu4Desc: "Language Center - University of Jordan (150 training hours - Good grade).",
+                secResearchTitle: '<span class="text-cyan-400 font-mono text-xl">02.</span> Published Research Papers',
+                secResearchSub: "Research papers accepted & presented at the Global Space Exploration Conference (GLEX 2025)",
+                secProjectsTitle: '<span class="text-cyan-400 font-mono text-xl">03.</span> Projects & Software Systems',
+                proj1Desc: "Full-stack web platform linking freelancers with business owners to manage services, orders, and project collaboration seamlessly.",
+                proj2Desc: "Intelligent e-commerce review summarization and analysis system using deep learning models, built as a Chrome Extension for sentiment-based insights.",
+                proj3Desc: "Chest X-Ray analysis system for predicting lung diseases using Convolutional Neural Networks (CNN) to assist in early medical diagnosis.",
+                proj4Desc: "Fuzzy Logic-based system predicting student final grades and performance based on attendance, prior performance, and study hours.",
+                secExpTitle: '<span class="text-cyan-400 font-mono text-xl">04.</span> Professional Experience & Leadership',
+                exp2Desc: "Practical training on industry-level Artificial Intelligence and Data Science projects.",
+                exp3Desc: "Leading strategic partnerships and securing national sponsorships to empower IEEE activities across Jordan.",
+                exp4Desc: "Co-founding a creative agency specializing in visual identity, marketing, and digital content strategies.",
+                exp5Desc: "Developing real-world tech projects in collaboration with Jordan Islamic Bank.",
+                exp6Desc: "Co-founding TEDx TTU event, organizing logistics, and managing speaker curation.",
+                exp7Desc: "Managing logistics and execution for the largest student startup competition across Jordanian universities.",
+                exp8Desc: "Promoting innovation & entrepreneurship, recognized as 'Best Ambassador' across IEEE Region 8.",
+                secSkillsTitle: '<span class="text-cyan-400 font-mono text-xl">05.</span> Technical & Soft Skills',
+                softSkillsTitle: "Soft Skills",
+                sk1: "Problem Solving & Critical Thinking",
+                sk2: "Public Speaking & Technical Writing",
+                sk3: "Strategic Planning & Project Management",
+                sk4: "Leadership & Team Management",
+                footerTitle: "Have a project or opportunity?",
+                footerDesc: "Available for building intelligent systems, scalable web solutions, or collaborating on technical research.",
+                btnEmail: "Send Email"
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            const langData = translations[currentLang];
+
+            // Change HTML Direction & Lang
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+            // Apply Texts
+            document.getElementById('page-title').innerText = langData.pageTitle;
+            document.getElementById('nav-name').innerText = langData.navName;
+            document.getElementById('nav-about').innerText = langData.navAbout;
+            document.getElementById('nav-edu').innerText = langData.navEdu;
+            document.getElementById('nav-research').innerText = langData.navResearch;
+            document.getElementById('nav-projects').innerText = langData.navProjects;
+            document.getElementById('nav-exp').innerText = langData.navExp;
+            document.getElementById('nav-skills').innerText = langData.navSkills;
+            document.getElementById('nav-contact').innerText = langData.navContact;
+            document.getElementById('lang-btn-text').innerText = langData.langBtn;
+
+            document.getElementById('hero-title').innerHTML = langData.heroTitle;
+            document.getElementById('hero-desc').innerText = langData.heroDesc;
+            document.getElementById('btn-projects').innerText = langData.btnProjects;
+            document.getElementById('btn-linkedin').innerText = langData.btnLinkedin;
+            document.getElementById('img-caption').innerText = langData.imgCaption;
+
+            document.getElementById('sec-edu-title').innerHTML = langData.secEduTitle;
+            document.getElementById('edu-1-title').innerText = langData.edu1Title;
+            document.getElementById('edu-1-sub').innerText = langData.edu1Sub;
+            document.getElementById('edu-1-core').innerText = langData.edu1Core;
+            document.getElementById('edu-2-title').innerText = langData.edu2Title;
+            document.getElementById('edu-2-sub').innerText = langData.edu2Sub;
+            document.getElementById('edu-2-desc').innerText = langData.edu2Desc;
+            document.getElementById('edu-3-title').innerText = langData.edu3Title;
+            document.getElementById('edu-3-desc').innerText = langData.edu3Desc;
+            document.getElementById('edu-4-title').innerText = langData.edu4Title;
+            document.getElementById('edu-4-desc').innerText = langData.edu4Desc;
+
+            document.getElementById('sec-research-title').innerHTML = langData.secResearchTitle;
+            document.getElementById('sec-research-sub').innerText = langData.secResearchSub;
+
+            document.getElementById('sec-projects-title').innerHTML = langData.secProjectsTitle;
+            document.getElementById('proj-1-desc').innerText = langData.proj1Desc;
+            document.getElementById('proj-2-desc').innerText = langData.proj2Desc;
+            document.getElementById('proj-3-desc').innerText = langData.proj3Desc;
+            document.getElementById('proj-4-desc').innerText = langData.proj4Desc;
+
+            document.getElementById('sec-exp-title').innerHTML = langData.secExpTitle;
+            document.getElementById('exp-2-desc').innerText = langData.exp2Desc;
+            document.getElementById('exp-3-desc').innerText = langData.exp3Desc;
+            document.getElementById('exp-4-desc').innerText = langData.exp4Desc;
+            document.getElementById('exp-5-desc').innerText = langData.exp5Desc;
+            document.getElementById('exp-6-desc').innerText = langData.exp6Desc;
+            document.getElementById('exp-7-desc').innerText = langData.exp7Desc;
+            document.getElementById('exp-8-desc').innerText = langData.exp8Desc;
+
+            document.getElementById('sec-skills-title').innerHTML = langData.secSkillsTitle;
+            document.getElementById('soft-skills-title').innerText = langData.softSkillsTitle;
+            document.getElementById('sk-1').innerText = langData.sk1;
+            document.getElementById('sk-2').innerText = langData.sk2;
+            document.getElementById('sk-3').innerText = langData.sk3;
+            document.getElementById('sk-4').innerText = langData.sk4;
+
+            document.getElementById('footer-title').innerText = langData.footerTitle;
+            document.getElementById('footer-desc').innerText = langData.footerDesc;
+            document.getElementById('btn-email').innerText = langData.btnEmail;
+        }
+
+        // Canvas Setup
         const canvas = document.getElementById('neural-canvas');
         const ctx = canvas.getContext('2d');
         
